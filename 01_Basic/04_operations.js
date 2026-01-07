@@ -25,3 +25,20 @@ let gameChanger=100
 console.log("Game Changer:", gameChanger) // Output: Game Changer: 101
 
 
+
+//postfix decrement
+let x = 10
+let y = x++
+
+console.log(x) // 11
+console.log(y) // 10
+
+//prefix decrement
+
+// let x = 10
+// let y = ++x
+
+// console.log(x) // 11
+// console.log(y) // 11
+
+
