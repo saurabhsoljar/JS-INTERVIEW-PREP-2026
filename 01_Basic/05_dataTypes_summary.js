@@ -253,3 +253,13 @@ seven primitive types and one non-primitive object type, where
 primitives store values directly and objects store references.
 
 */
+
+// Stack, Heap and Memory Management in JavaScript
+
+/*
+Stack(Primitive Data Types)
+used copy of value
+Heap(Non-Primitive Data Types)
+used reference of value or original value
+
+*/
