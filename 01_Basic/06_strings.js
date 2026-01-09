@@ -32,4 +32,6 @@ console.log(newStringOne);
 console.log(newStringOne.trim());// "saurabh kumar"
 
 //replace
-const url= ""
+const url= "https://www.youtube.com/watch?v=tTDjCfkQNpY"
+const newUrl = url.replace("www","xxx");
+console.log(newUrl);
