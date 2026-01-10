@@ -24,11 +24,11 @@ const name =["saurabh","kumar","singh"];
 
 //slice and splice
 const slicedArray = myArray.slice(1, 4); // extracts elements from index 1 to 3
-console.log(myArray);
+//console.log(myArray);
 
-console.log(slicedArray);
+//console.log(slicedArray);
 
 const splicedArray = myArray.splice(1,4);    // removes 2 elements from index 1 and adds 25 and 35
 //console.log(myArray);
-console.log(splicedArray);
+//console.log(splicedArray);
 
