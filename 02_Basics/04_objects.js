@@ -36,7 +36,21 @@ const obj3 = {...obj1, ...obj2,...obj4}; // merging two objects
 //const obj3 = Object.assign({}, obj1, obj2,obj4); // merging two objects using Object.assign method
 //console.log(obj3); // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+//===============Objects de-structure=================
+
+const course ={
+    courseName: "JavaScript",
+    price: 999,
+    courseInstructor: "Saurabh Kumar"
+}
+
+//course.courseInstructor; // "Saurabh Kumar"
+const {courseInstructor: instructor} = course; //object de-structuring
+
+//console.log(courseInstructor);
+console.log(instructor); // "Saurabh Kumar"
