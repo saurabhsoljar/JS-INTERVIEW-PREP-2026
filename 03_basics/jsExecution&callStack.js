@@ -11,7 +11,7 @@ let result2 = addNum(5, 15)
 console.log("Result 1: " + result1)   // Output: Result 1: 30
 console.log("Result 2: " + result2)  // Output: Result 2: 20
 
-how JavaScript executes this code?
+//how JavaScript executes this code?
 // When the JavaScript engine encounters this code, it follows these steps:
 // 1. Global Execution Context Creation:
 //    - The engine creates a global execution context.
