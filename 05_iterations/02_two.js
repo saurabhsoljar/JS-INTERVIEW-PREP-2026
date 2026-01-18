@@ -20,3 +20,13 @@ do{
     console.log(`score is ${score}`);
     score++
 }  while(score <= 30)
+
+
+
+
+
+
+
+
+    
+
