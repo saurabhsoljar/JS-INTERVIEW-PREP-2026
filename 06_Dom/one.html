@@ -1,0 +1,221 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading">Dom learning on Chai aur code</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+</body>
+</html> -->
+
+<!-- /*
+DOM (Document Object Model)
+The DOM is a programming interface that represents an HTML document as a tree structure, allowing JavaScript to access and manipulate the content, structure, and styling of a web page.
+
+What is the DOM?
+The DOM treats your HTML document as a tree of objects (nodes). Each HTML element becomes a JavaScript object that you can interact with.
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>This is a paragraph</p>
+  </body>
+</html>
+```
+
+**DOM Tree Structure:**
+```
+Document
+  └── html
+      ├── head
+      │   └── title
+      │       └── "My Page"
+      └── body
+          ├── h1
+          │   └── "Hello World"
+          └── p
+              └── "This is a paragraph"
+
+Selecting Elements
+
+// Select by ID
+let element = document.getElementById("myId");
+
+// Select by class name (returns collection)
+let elements = document.getElementsByClassName("myClass");
+
+// Select by tag name
+let paragraphs = document.getElementsByTagName("p");
+
+// Query selector (CSS-style, returns first match)
+let item = document.querySelector(".myClass");
+
+// Query selector all (returns all matches)
+let items = document.querySelectorAll(".myClass");
+
+Manipulating Content
+
+// Change text content
+let heading = document.getElementById("title");
+heading.textContent = "New Title";
+
+// Change HTML content
+let div = document.getElementById("container");
+div.innerHTML = "<p>New paragraph</p>";
+
+// Change attributes
+let img = document.querySelector("img");
+img.src = "new-image.jpg";
+img.alt = "New description";
+
+// Change styles
+let box = document.getElementById("box");
+box.style.color = "red";
+box.style.backgroundColor = "blue";
+box.style.fontSize = "20px";
+
+Creating and Adding Elements
+// Create new element
+let newDiv = document.createElement("div");
+newDiv.textContent = "I'm new!";
+newDiv.className = "box";
+
+// Append to parent
+document.body.appendChild(newDiv);
+
+// Insert before another element
+let parent = document.getElementById("container");
+let referenceNode = document.getElementById("existing");
+parent.insertBefore(newDiv, referenceNode);
+
+// Remove element
+let elementToRemove = document.getElementById("old");
+elementToRemove.remove();
+
+Adding/Removing Classes
+let element = document.getElementById("myElement");
+
+// Add class
+element.classList.add("active");
+
+// Remove class
+element.classList.remove("hidden");
+
+// Toggle class
+element.classList.toggle("dark-mode");
+
+// Check if has class
+if (element.classList.contains("active")) {
+    console.log("Element is active");
+}
+
+Event Handling
+
+// Click event
+let button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+
+// Mouse events
+let box = document.getElementById("box");
+box.addEventListener("mouseover", function() {
+    box.style.backgroundColor = "yellow";
+});
+
+box.addEventListener("mouseout", function() {
+    box.style.backgroundColor = "white";
+});
+
+// Keyboard events
+document.addEventListener("keydown", function(event) {
+    console.log("Key pressed: " + event.key);
+});
+
+// Form events
+let input = document.getElementById("nameInput");
+input.addEventListener("input", function(event) {
+    console.log("Current value: " + event.target.value);
+});
+
+Traversing the DOM
+
+let element = document.getElementById("child");
+
+// Parent
+let parent = element.parentElement;
+
+// Children
+let children = element.children;
+let firstChild = element.firstElementChild;
+let lastChild = element.lastElementChild;
+
+// Siblings
+let nextSibling = element.nextElementSibling;
+let prevSibling = element.previousElementSibling;
+
+#Practical Example
+*/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+    <style>
+        .box { 
+            width: 200px; 
+            height: 200px; 
+            background: lightblue;
+            margin: 10px;
+        }
+        .active { border: 3px solid red; }
+    </style>
+</head>
+<body>
+    <h1 id="title">DOM Manipulation</h1>
+    <button id="changeBtn">Change Title</button>
+    <button id="addBtn">Add Box</button>
+    <div id="container"></div>
+
+    <script>
+        // Change title
+        document.getElementById("changeBtn").addEventListener("click", function() {
+            document.getElementById("title").textContent = "Title Changed!";
+            document.getElementById("title").style.color = "red";
+        });
+
+        // Add new box
+        document.getElementById("addBtn").addEventListener("click", function() {
+            let newBox = document.createElement("div");
+            newBox.className = "box";
+            newBox.textContent = "New Box";
+            
+            // Add click event to new box
+            newBox.addEventListener("click", function() {
+                this.classList.toggle("active");
+            });
+            
+            document.getElementById("container").appendChild(newBox);
+        });
+    </script>
+</body>
+</html>
+
+<!-- /*
+Key Concepts
+Document - The root object representing the entire page
+Element - Individual HTML tags (div, p, h1, etc.)
+Node - Everything in the DOM tree (elements, text, comments)
+Event - Actions that happen in the browser (clicks, key presses, etc.)
+Attribute - Properties of HTML elements (id, class, src, etc.)
+The DOM is what makes web pages interactive and dynamic! Would you like me to explain any specific DOM concept in more detail or create an interactive example?
+*/ -->
