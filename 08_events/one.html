@@ -13,13 +13,13 @@
         <ul id="image" style="list-style:none; display:flex; flex-wrap:wrap; gap:20px; padding:0;">
             
             <li>
-                <img width="200px" style="padding:10px; background:#222;"
+                <img width="200px" id="radhe-1" style="padding:10px; background:#222;"
                 src="https://t3.ftcdn.net/jpg/16/29/39/12/240_F_1629391249_svLbVWHWPBP8kwJvC48iPhc7fcROPVME.jpg"
                 alt="Krishna Radha 1">
             </li>
 
             <li>
-                <img width="200" style="padding:10px; background:#222;"
+                <img width="200" id="radhe-2" style="padding:10px; background:#222;"
                 src="https://t3.ftcdn.net/jpg/08/88/00/30/240_F_888003080_Vs6NV5VlTzZpldFYIni0HxSBfuZUTdql.jpg"
                 alt="Krishna Radha 2">
             </li>
@@ -76,4 +76,47 @@
     </div>
 
 </body>
+<script>
+
+        //attachEvent
+    //jQuery -on
+
+    //types,Timestamp,defaultPrevented
+    //target, toElement, srcElement,currentTarget
+    //clientx, clienty,screenx, screeny
+    //altKey,ctrkey,shiftKey,KeyCode
+
+
+    // document.getElementById('radhe-1').onclick = function(){
+    //     alert('jai ho')
+    // }
+
+    // document.getElementById('radhe-1').addEventListener('click',function(e){
+    //     //alert('radhe rdahe ji again')
+    //     console.log(e);
+        
+    // },true)
+
+    //event propagation- there are two contact 1. event bubling 2.event capturing
+
+    //more used in market is default mens false exp-1. event bubling is more used in market
+
+    // document.getElementById('radhe-1').addEventListener('click',function(e){
+    //     console.log('clicked inside the frist image');
+    // },true)
+
+    // document.getElementById('radhe-2').addEventListener('click',function(e){
+    //     console.log('clicked inside the second image');
+    //     e.stopPropagation()
+    // },true)
+
+    document.querySelector('#image').addEventListener
+    ('click',function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+        removeIt.remove() // remove image
+        //removeIt.parentNode.removeChild(removeIt)
+    })
+
+</script>
 </html>
