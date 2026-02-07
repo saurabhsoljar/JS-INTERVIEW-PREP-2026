@@ -1,3 +1,4 @@
+/*
 let score ="50abc"
 
 // console.log(typeof score);
@@ -132,3 +133,46 @@ It results in NaN because the string is not purely numeric.
 JavaScript performs type conversion using constructors like Number(), Boolean(), and String(). If conversion fails, it returns NaN, and some values are treated as truthy or falsy.
 
 */
+
+let score = "67abc"
+let valueInNumber = Number(score)
+// console.log(valueInNumber)  //NaN
+// console.log(typeof valueInNumber) // Number
+// console.log(typeof score);   //String
+
+
+// Boolean conversion (Login example)
+
+let isLoggedIn = 1
+let booleanIsLoggedIn = Boolean(isLoggedIn)
+//console.log(typeof isLoggedIn); //1 , number
+//console.log(typeof booleanIsLoggedIn) // true boolean
+
+/*
+Rule:
+
+0 → false
+
+1 → true
+
+Real-life meaning:
+
+0 → user not logged in
+
+1 → user logged in
+
+*/
+
+//🔹 Number → String
+
+let someNumber = 1234
+let stringNumber = String(someNumber)
+//console.log(typeof someNumber) // Number
+//console.log(typeof stringNumber) // string
+
+
+let first = Number(null)
+let second = Number(undefined)
+//console.log(first) //0
+//console.log(second) // NaN
+
