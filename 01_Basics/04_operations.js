@@ -3,6 +3,7 @@ let negativeValue=-value
 
 // console.log("Value:", value)               // Output: Value: 3
 // console.log("Negative Value:", negativeValue) // Output: Negative Value: -3
+//👉 Unary minus just changes the sign, not the value itself.
 
 let str1="saurabh"
 let str2=" kumar"

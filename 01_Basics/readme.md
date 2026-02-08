@@ -727,3 +727,98 @@ Explain type coercion diagram
 Give company-level tricky questions
 
 Just tell me 😊
+
+## 3️⃣ String + Number Confusion (Very Important ⚠️)
+
+console.log("1" + 2) // "12"
+console.log(1 + "2") // "12"
+
+🔹 Why?
+JavaScript converts number → string
+Then joins them
+👉 Rule:
+If one value is string → result is string
+
+## 4️⃣ Unary Plus Operator (+)
+
+console.log(+true) // 1
+console.log(+"")   // 0
+
+## 5️⃣ Prefix Increment (++variable)
+
+let gameChanger = 100
+++gameChanger
+console.log(gameChanger)
+
+output-101
+
+🔹 How it works?
+First increase
+Then use the value
+
+👉 Prefix = increment first
+
+## 6️⃣ Postfix Increment (variable++)
+
+let x = 10
+let y = x++
+
+🔹 Step-by-step:
+
+y = x → y = 10
+x++ → x becomes 11
+
+👉 Postfix = use first, then increment
+
+# 🔥 MOST IMPORTANT INTERVIEW QUESTIONS (With Answers)
+
+❓1. What is the difference between ++x and x++?
+✅ Answer:
+++x → increment first, then use
+x++ → use first, then increment
+
+❓2. What will be the output?
+console.log("5" + 5) // "55"
+console.log("5" - 2) // -3
+
+👉 + → string concat
+👉 - → numeric operation
+
+❓3. What does unary plus (+) do?
+✅ Answer:
+It converts the value into a number.
+
+Example:
++"10"  // 10
++true  // 1
+
+
+❓4. Is JavaScript strongly typed?
+✅ Answer:
+No. JavaScript is loosely / dynamically typed.
+
+❓5. What is type coercion?
+
+✅ Answer:
+Automatic conversion of one data type into another during operations.
+Example:
+"1" + 2  // "12"
+"5" - 2  // 3
+
+❓6. Which operator has higher priority?
+x++
+++x
+✅ Answer:
+Both have same precedence, but behavior is different.
+
+❓7. Output based question (Interview favorite 🔥)
+let a = 5
+let b = a++ + ++a
+console.log(b)
+
+✅ Answer:12
+🔹 Explanation:
+a++ → 5 (a becomes 6)
+++a → 7
+5 + 7 = 12
+
